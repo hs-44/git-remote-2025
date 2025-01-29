@@ -27,6 +27,7 @@ phases:
       - echo Build started on `date`
       - aws s3 ls
       - aws ec2 describe-instances
+      - echo This line is added in child branch 
       - bash test.sh
     finally:
       - echo This always runs even if the install command fails
