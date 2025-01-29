@@ -26,6 +26,7 @@ phases:
       - echo Entered the build phase...
       - echo Build started on `date`
       - aws s3 ls
+      - aws ec2 describe-instances
     finally:
       - echo This always runs even if the install command fails
   post_build:
